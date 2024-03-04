@@ -1,0 +1,15 @@
+/workspaces/CS_darbi/obj/Debug/net8.0/CS_darbi.GeneratedMSBuildEditorConfig.editorconfig
+/workspaces/CS_darbi/obj/Debug/net8.0/CS_darbi.AssemblyInfoInputs.cache
+/workspaces/CS_darbi/obj/Debug/net8.0/CS_darbi.AssemblyInfo.cs
+/workspaces/CS_darbi/obj/Debug/net8.0/CS_darbi.csproj.CoreCompileInputs.cache
+/workspaces/CS_darbi/obj/Debug/net8.0/CS_darbi.sourcelink.json
+/workspaces/CS_darbi/bin/Debug/net8.0/CS_darbi
+/workspaces/CS_darbi/bin/Debug/net8.0/CS_darbi.deps.json
+/workspaces/CS_darbi/bin/Debug/net8.0/CS_darbi.runtimeconfig.json
+/workspaces/CS_darbi/bin/Debug/net8.0/CS_darbi.dll
+/workspaces/CS_darbi/bin/Debug/net8.0/CS_darbi.pdb
+/workspaces/CS_darbi/obj/Debug/net8.0/CS_darbi.dll
+/workspaces/CS_darbi/obj/Debug/net8.0/refint/CS_darbi.dll
+/workspaces/CS_darbi/obj/Debug/net8.0/CS_darbi.pdb
+/workspaces/CS_darbi/obj/Debug/net8.0/CS_darbi.genruntimeconfig.cache
+/workspaces/CS_darbi/obj/Debug/net8.0/ref/CS_darbi.dll
