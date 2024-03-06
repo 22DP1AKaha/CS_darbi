@@ -19,10 +19,10 @@ class Rectangle : Figure
     {
     }
 
-    new public void Display(){
-        System.Console.WriteLine($"Name:{name}, Coordinates:({x1}{y1})({x2},{y2})");
+    public override void Display(){
+        System.Console.WriteLine($"Name:{name}, Coordinates:(x1 = {x1}; y1 = {y1})(x2 = {x2}; y2 = {y2})");
     }
-    public void Area(){
+    public virtual void Area(){
         double width = Math.Abs(x2 - x1);
         double height = Math.Abs(y2 - y1);
         double area = width * height;

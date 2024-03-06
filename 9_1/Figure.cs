@@ -5,7 +5,7 @@ class Figure{
     public Figure(String name) {
         this.name = name;
     }
-    public void Display(){
+    public virtual void Display(){
         System.Console.WriteLine(name);    
     }
 }
