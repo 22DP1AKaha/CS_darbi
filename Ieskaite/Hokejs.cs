@@ -1,10 +1,11 @@
-public class Futbols : Sacensibas{
-
+class Hokejs : Sacensibas
+{
+    
     public int SpelesUzvaretasKomanda1 = 0;
     public int SpelesUzvaretasKomanda2 = 0;
     public int NeizskirtasSpeles = 0;
 
-    public Futbols(int DalibniekuSkaits, String Komanda1, String Komanda2) 
+    public Hokejs(int DalibniekuSkaits, String Komanda1, String Komanda2) 
     {
         dalibnieki = DalibniekuSkaits;
         komanda1 = Komanda1;
@@ -64,7 +65,7 @@ public class Futbols : Sacensibas{
     public override void SaktSacencibas()
     {
         Notiek = true;
-        System.Console.WriteLine("Futbola sacensības sākušās");
+        System.Console.WriteLine("Hokeja sacensības sākušās");
     }
     public override void BeigtSacensibas()
     {
@@ -76,4 +77,5 @@ public class Futbols : Sacensibas{
         System.Console.WriteLine($"Pirmā komanda: {Komanda1}; Spēļu vēsture (W/D/L): {SpelesUzvaretasKomanda1}|{NeizskirtasSpeles}|{SpelesUzvaretasKomanda2}; Punkti: {PirmasKomandasPunkti()}");
         System.Console.WriteLine($"Otrā komanda: {Komanda2}; Spēļu vēsture (W/D/L): {SpelesUzvaretasKomanda2}|{NeizskirtasSpeles}|{SpelesUzvaretasKomanda1}; Punkti: {OtrasKomandasPunkti()} ");
     }
+
 }
