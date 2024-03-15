@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CS_darbi")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+778b0b6fc6a654b9507de57129894faef905dbb8")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+eeca9ab90e1ab11cd6450bd3d74d0e3cf530597d")]
 [assembly: System.Reflection.AssemblyProductAttribute("CS_darbi")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CS_darbi")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -1,81 +1,67 @@
-class Hokejs : Sacensibas
+public class Hokejs : Sacensibas
 {
-    
-    public int SpelesUzvaretasKomanda1 = 0;
-    public int SpelesUzvaretasKomanda2 = 0;
-    public int NeizskirtasSpeles = 0;
-
-    public Hokejs(int DalibniekuSkaits, String Komanda1, String Komanda2) 
+    public Hokejs(int dalibnieki, String komanda1, String komanda2) 
     {
-        dalibnieki = DalibniekuSkaits;
-        komanda1 = Komanda1;
-        komanda2 = Komanda2;
+        this.dalibnieki = dalibnieki;
+        this.komanda1 = komanda1;
+        this.komanda2 = komanda2;
     }
     public override void UzvaretSpeli()
     {
-        if (Notiek == true)
+        if (notiek == true)
         {
-            if (RandomResult())
+            if (RandomResult() == 1)
             {
-                System.Console.WriteLine($"{Komanda1} uzvarēja spēli");
-                SpelesUzvaretasKomanda1++;
+                System.Console.WriteLine($"{komanda1} uzvarēja spēli!");
+                spelesuzvaretaskomanda1++;
+            }
+            else if (RandomResult() == 2)
+            {
+                System.Console.WriteLine($"{komanda2} uzvarēja spēli!");
+                spelesuzvaretaskomanda2++;
             }
             else
             {
-                System.Console.WriteLine($"{Komanda2} uzvarēja spēli");
-                SpelesUzvaretasKomanda2++;
+                System.Console.WriteLine("Komandas nospēlēja neizšķirti!");
+                neizskirtasspeles++;
             }
         }
         else
         {
             System.Console.WriteLine("Turnīrs nav sācies vai ir beidzies");
         }
+    }
 
-        // System.Console.WriteLine($"{Komanda1} uzvarētās spēles: {SpelesUzvaretasKomanda1}");
-        // System.Console.WriteLine($"{Komanda2} uzvarētās spēles: {SpelesUzvaretasKomanda2}");
-    }
-    public override void Neizskirts()
-    {
-        if (Notiek == true)
-        {
-            NeizskirtasSpeles++;
-            System.Console.WriteLine("Komandas nospēlēja neizšķirti");
-        }
-        else
-        {
-            System.Console.WriteLine("Turnīrs nav sācies vai ir beidzies");
-        }
-    }
     public override int PirmasKomandasPunkti()
     {
-        punkti = SpelesUzvaretasKomanda1*3 + NeizskirtasSpeles*1;
+        punkti = spelesuzvaretaskomanda1*3 + neizskirtasspeles*1;
         return punkti;
     }
     public override int OtrasKomandasPunkti()
     {
-        punkti = SpelesUzvaretasKomanda2*3 + NeizskirtasSpeles*1;
+        punkti = spelesuzvaretaskomanda2*3 + neizskirtasspeles*1;
         return punkti;
     }
 
-    private bool RandomResult()
+    private int RandomResult()
     {
-        Random random = new Random();
-        return random.Next(2) == 0;
+    Random random = new Random();
+    return random.Next(1, 3); 
     }
     public override void SaktSacencibas()
     {
-        Notiek = true;
+        notiek = true;
         System.Console.WriteLine("Hokeja sacensības sākušās");
     }
     public override void BeigtSacensibas()
     {
-        Notiek = false;
-        System.Console.WriteLine("Futbola sacensības beigušās");
+        notiek = false;
+        System.Console.WriteLine("Hokeja sacensības beigušās");
     }
     public override void info()
     {
-        System.Console.WriteLine($"Pirmā komanda: {Komanda1}; Spēļu vēsture (W/D/L): {SpelesUzvaretasKomanda1}|{NeizskirtasSpeles}|{SpelesUzvaretasKomanda2}; Punkti: {PirmasKomandasPunkti()}");
-        System.Console.WriteLine($"Otrā komanda: {Komanda2}; Spēļu vēsture (W/D/L): {SpelesUzvaretasKomanda2}|{NeizskirtasSpeles}|{SpelesUzvaretasKomanda1}; Punkti: {OtrasKomandasPunkti()} ");
+        System.Console.WriteLine($"\nPirmā komanda: {komanda1}; Spēļu vēsture (W/D/L): {spelesuzvaretaskomanda1}|{neizskirtasspeles}|{spelesuzvaretaskomanda2}; Punkti: {PirmasKomandasPunkti()}");
+        System.Console.WriteLine($"Otrā komanda: {komanda2}; Spēļu vēsture (W/D/L): {spelesuzvaretaskomanda2}|{neizskirtasspeles}|{spelesuzvaretaskomanda1}; Punkti: {OtrasKomandasPunkti()} ");
     }
 
 }
